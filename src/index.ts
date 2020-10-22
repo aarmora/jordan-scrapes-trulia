@@ -19,17 +19,13 @@ const exampleAddresses = [
 
         console.log('Path', path);
 
-
         // go to the property details path/url and get estimate
         if (path) {
             const price = await getPrice(path);
 
             console.log('price', price);
         }
-
     }
-
-
 })();
 
 
@@ -84,6 +80,4 @@ async function getPrice(path: string) {
     const price = $('[data-testid="home-details-sm-lg-xl-price-details"] .qAaUO').text();
 
     return price;
-
-
 }
